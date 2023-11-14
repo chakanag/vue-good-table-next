@@ -287,7 +287,7 @@
 							<td :colspan="fullColspan">
 								<slot name="emptystate">
 									<div class="vgt-center-align vgt-text-disabled">
-										No data for table
+										{{emptyMessage}}
 									</div>
 								</slot>
 							</td>
@@ -445,6 +445,12 @@ export default {
 			default: "",
 			type: String,
 		},
+
+		//empty Message
+		emptyMessage: {
+			default: "No data for table",
+			type: String
+		}
 	},
 
 	data: () => ({
