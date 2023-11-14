@@ -1,5 +1,5 @@
 /*!
-  * vue-good-table-next v0.2.0
+  * vue-good-table-next v0.2.1
   * (c) 2021-present Boris Flesch <boris@singlequote.net>
   * (c) 2017-2021 xaksis <shay@crayonbits.com>
   * @license MIT
@@ -8498,6 +8498,12 @@ const _sfc_main = {
 			default: "",
 			type: String,
 		},
+
+		//empty Message
+		emptyMessage: {
+			default: "No data for table",
+			type: String
+		}
 	},
 
 	data: () => ({
@@ -9841,7 +9847,7 @@ const _hoisted_14 = ["colspan"];
 const _hoisted_15 = ["colspan"];
 const _hoisted_16 = { key: 0 };
 const _hoisted_17 = ["colspan"];
-const _hoisted_18 = /*#__PURE__*/createElementVNode("div", { class: "vgt-center-align vgt-text-disabled" }, " No data for table ", -1 /* HOISTED */);
+const _hoisted_18 = { class: "vgt-center-align vgt-text-disabled" };
 const _hoisted_19 = {
   key: 2,
   class: "vgt-wrap__actions-footer"
@@ -10185,7 +10191,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                 createElementVNode("tr", null, [
                   createElementVNode("td", { colspan: $options.fullColspan }, [
                     renderSlot(_ctx.$slots, "emptystate", {}, () => [
-                      _hoisted_18
+                      createElementVNode("div", _hoisted_18, toDisplayString($props.emptyMessage), 1 /* TEXT */)
                     ])
                   ], 8 /* PROPS */, _hoisted_17)
                 ])
